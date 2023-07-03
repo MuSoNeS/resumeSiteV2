@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Resume-Website HTML CSS Only Codehal</title>
+    <link rel = "stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="node_modules\smartphoto\css\smartphoto.min.css">
+    <script src="node_modules\smartphoto\js\smartphoto.min.js"></script>
+</head>
+
+<body>
+    
+    <header class = "header"> 
+        <nav class="navbar">
+            <a href="index.html" class = "active">Главная</a>
+            <a href="my skills.html">Мои навыки</a>
+            <a href="portfolio.html">Портфолио</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </header>
+    <section>
+       
+    </section>
+    <section class = "container main-container">
+        <div class="demo-list">
+        <a href="src/img/C_Sharp_page-0001.jpg" class="js-smartPhoto" data-caption = "me" data-id = "me" data-group = "me">
+            <img src="src/img/C_Sharp_page-0001.jpg" alt="sharp">
+        </a>
+        <a href="src/img/html_css_page-0001.jpg" class="js-smartPhoto" data-caption = "me" data-id = "me" data-group = "me">
+            <img src="src/img/html_css_page-0001.jpg" alt="htmlcss">
+        </a>
+        
+        </div>
+    </section>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', function () {
+      new SmartPhoto(".js-smartPhoto");
+      new SmartPhoto(".js-smartPhoto-hide", {
+        arrows: false,
+        nav: false
+      });
+      new SmartPhoto(".js-smartPhoto-fit", {
+        resizeStyle: 'fit'
+      });
+    });
+    </script>
+
+    <div data-id="LJ9VWWRVF1HBH">
+        <div class="smartphoto" aria-hidden="true" role = "dialog">
+            <div class="smartphoto-body">
+                <div class="smartphoto-inner">
+                    <div class="smartphoto-header">
+                        <span class="smartphoto-count">1/6</span>
+                        <span class="smartphoto-caption" aria-live="polite" tabindex="-1">bear</span>
+                        <button class="smartphoto-dismiss" data-action-click="hidePhoto()">
+                            <span class="smartphoto-sr-only">close the image dialog</span>
+                        </button>
+                    </div>
+                    <div class="smartphoto-content" data-action-touchstart="beforeDrag" data-action-touchmove="onDrag" data-action-touchend="afterDrag(false)"></div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <section class = "home">
+            <div class="home-content">   
+                <div class="btn-box">
+                    <a href="https://kwork.ru/user/piratmusones">Наймите меня</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>   
+        </div>
+        <div class="swipe">
+            <a href="index.html"><</a>
+            <a href="portfolio.html">></a>
+        </div>
+        <div class="home-sci">
+            <a href="https://vk.com/id340608389"><i class='bx bxl-vk'></i></a>
+            <a href="https://t.me/telegram/PiratMussone"><i class='bx bxl-telegram'></i></a>
+            <a href="https://github.com/MuSoNeS"><i class='bx bxl-github'></i></a>
+        </div>
+       
+    </section>
+    
+
+    
+</body>
+
+</html>
