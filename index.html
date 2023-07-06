@@ -16,13 +16,13 @@
     
     <header class = "header"> 
         <nav class="navbar">
-            <a href="index.html" class = "active">Главная</a>
-            <a href="my skills.html">Мои навыки</a>
-            <a href="portfolio.html">Портфолио</a>
-            <a href="contacts.html">Контакты</a>
+            <a href="#index">Главная</a>
+            <a href="#my-skills">Мои навыки</a>
+            <a href="#my-portfolio">Портфолио</a>
         </nav>
     </header>
-    <section class = "container main-container">
+   
+    <section class = "container main-container" id="index">
         <div class="demo-list">
         <a href="src/img/q3qb8B9YHd0.jpg" class="js-smartPhoto" data-caption = "me" data-id = "me" data-group = "me">
             <img src="src/img/q3qb8B9YHd0.jpg" alt="Я в машине">
@@ -42,6 +42,29 @@
         <a href="src/img/f4hgSSnymeI.jpg" class="js-smartPhoto" data-caption = "me" data-id = "me" data-group = "me">
             <img src="src/img/f4hgSSnymeI.jpg" alt="Прикольная шляпа">
         </a>
+        </div>
+        <div class="marquee-container">
+            <p class="marquee">
+                Моя девушка сказала, что фото на главной странице - моветон, 
+                но мне хотелось сделать сайт максимально информативным.
+            </p>
+        </div>
+    </section>
+
+    
+    <section class = "container main-container" id="my-skills">
+        <div class="demo-list">
+        <a href="src/img/C_Sharp_page-0001.jpg" class="js-smartPhoto" data-caption = "me" data-id = "me" data-group = "me">
+            <img src="src/img/C_Sharp_page-0001.jpg" alt="sharp">
+        </a>
+        <a href="src/img/html_css_page-0001.jpg" class="js-smartPhoto" data-caption = "me" data-id = "me" data-group = "me">
+            <img src="src/img/html_css_page-0001.jpg" alt="htmlcss">
+        </a>
+        
+        </div>
+        <div class="marquee-container">
+            <p class="marquee-skills">
+                При помощи бегущей строки я хотел решить проблему размещения текста для мобильных устройств. Интересующийся задержит взгляд на ней, чтоб узнать, что на этой странице я держу сертификаты от BeonMax. Прямо сейчас я оканчиваю там курс и по JS.            </p>
         </div>
     </section>
 
@@ -76,23 +99,38 @@
 
         </div>
     </div>
-    <section class = "home">
+    <section class = "container main-container" id="my-portfolio">
+        <div class="demo-list">
+        <a href="src/img/Снимок.PNG" class="js-smartPhoto" data-caption = "My-first-site" data-id = "me" data-group = "me">
+            <img src="src/img/Снимок.PNG" alt="First site">
+        </a>
+        <a href="src/img/Снимок2.PNG" class="js-smartPhoto" data-caption = "My-github" data-id = "me" data-group = "me">
+            <img src="src/img/Снимок2.PNG" alt="github">
+        </a>
         
-        <div class="home-content">   
-                <div class="btn-box">
-                    <a href="https://kwork.ru/user/piratmusones">Наймите меня</a>
-                    <a href="contacts.html">Контакты</a>
-                </div>
         </div>
+        <div class="marquee-container">
+            <p class="marquee-portfolio">
+                  Моё Портфолио не претендует на статус самого масштабного в мире, конечно... Здесь вы увидете лишь предыдущую версию сайта-резюме и мои проекты на гитхабе. К слову, ссылка на гитхаб находится в футере(внизу страницы).  
+            </p>
+        </div>
+    </section>
 
-        <div class="swipe">
-            <a href="my skills.html">></a>
-        </div>
-        <div class="home-sci">
-            <a href="https://vk.com/id340608389"><i class='bx bxl-vk'></i></a>
-            <a href="https://t.me/telegram/PiratMussone"><i class='bx bxl-telegram'></i></a>
-            <a href="https://github.com/MuSoNeS"><i class='bx bxl-github'></i></a>
-        </div>
+   
+
+   
+    
+    <section class = "home">
+
+            <div class="home-sci">
+                <a href="https://vk.com/id340608389"><i class='bx bxl-vk'></i></a>
+                <a href="https://t.me/telegram/PiratMussone"><i class='bx bxl-telegram'></i></a>
+                <a href="https://github.com/MuSoNeS"><i class='bx bxl-github'></i></a>
+                <a href="mailto:piratmusones@gmail.com"><i class='bx bxl-gmail'></i></a>
+                <a href="tel:+79048095789"><i class='bx bxs-phone-call'></i></a>
+                <a href="https://kwork.ru/user/piratmusones"><i class='bx bxl-upwork'></i></a>
+            </div>
+
     </section>
     
 </body>

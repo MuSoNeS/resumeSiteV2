@@ -9,7 +9,9 @@
 *{
   box-sizing: border-box;
 }
-
+html{
+  scroll-behavior: smooth;
+}
   
 
  /* Mobile Devices */
@@ -22,7 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:  #47CBBD;
+    background-color:  transparent;
     background-size: 13%, 13%;
     background-repeat: no-repeat;
     width: 100%;
@@ -47,30 +49,270 @@
     width: 100%;
     height: 100vh;
     background-color: #ffa600a2;
+    background-position: center;
+    background-attachment: fixed;
     background-image: url(src/img/backNextPage.jpg);
     background-size: cover;
    }
-   .face{
+
+   
+  
+   .object{
+    position:absolute;
+  }
+
+  .van{
+    top: 50%;
+    width: 40%;
+    left: 0%;
+  }
+
+  #axis:hover .move-right{/*Для одного элемента в html можно определить несколько классов*/
+    transform: translate(480px,0,0);
+    -webkit-transform: translate(480px,0); /** Chrome & Safari **/
+    -o-transform: translate(1920px,0); /** Opera **/
+    -moz-transform: translate(1920px,0); /** Firefox **/
+  }
+
+  .object{
+    position: absolute;
+    transition: all 10s ease-in-out;
+    -webkit-transition: all 10s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all 5s ease-in-out; /** Firefox **/
+    -o-transition: all 5s ease-in-out; /** Opera **/
+  }
+
+
+   .js-smartPhoto img, .js-smartPhoto-fit img, 
+   .js-smartPhoto-hide img, .js-smartPhoto2 img{
+    height: 100%;
+    width: 80%;
+    position: relative;
+    margin-top: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+   }
+
+   .main-container img{
+    max-width: 360px;
+    max-height: 420px;
+   }
+   
+
+   .img{
+    border: 2px;
+    overflow: clip;
+   }
+
+   .demo-list{
+    overflow-x: auto;
+    white-space: nowrap;
+   }
+
+   .div{
+    display: block;
+   }
+
+   .a{
+    color: bisque;
+    text-decoration: none;
+   }
+
+   .a{
+    background-color: transparent;
+   }
+
+   a:-webkit-any-link{
+   color: bisque;
+   cursor: pointer;
+   text-decoration: none;
+   }
+
+   .demo-list{
+    white-space: nowrap;
+   }
+
+   .main-container{
+    padding: 20px 15px;
+    font-size: 100%;
+   }
+
+   .container{
+    max-width: 853px;
+    margin: auto;
+    padding: 0 15px;
+   }
+   .marquee-container{
+    display: flex;
+    align-items: center;
+    background: #47CBBD;
+    overflow: hidden;
+   }
+   .marquee{
+    font-size: 24px;
+    line-height: 0.5;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee:after{
+    content: "Моя девушка сказала, что фото на главной странице - моветон, но мне хотелось сделать сайт максимально информативным.";
+   }
+   .marquee-skills{
+    font-size: 24px;
+    line-height: 0.5;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee-skills:after{
+    content: "При помощи бегущей строки я хотел решить проблему размещения текста для мобильных устройств. Интересующийся задержит взгляд на ней, чтоб узнать, что на этой странице я держу сертификаты от BeonMax. Прямо сейчас я оканчиваю там курс и по JS.";
+   }
+   .marquee-portfolio{
+    font-size: 24px;
+    line-height: 0.5;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee-portfolio:after{
+    content: "Моё Портфолио не претендует на статус самого масштабного в мире, конечно... Здесь вы увидете лишь предыдущую версию сайта-резюме и мои проекты на гитхабе. К слову, ссылка на гитхаб находится в футере(внизу страницы).  ";
+   }
+
+   .home{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    background-color: transparent;
+    bottom: 5%;
+    
+   }
+
+   .btn-box{
+    width: 100%;
+    height: 5%;
+    
+   }
+   
+   .btn-box a{
+    font-size: 24px;
+    background-color: #47CBBD;
+    border-radius: 8%;
+    border: 2px solid;
+   }
+   .btn-box a:hover{
+    background-color: #BAD78B;
+   }
+
+   
+   .swipe a:hover{
+    background-color: #BAD78B;
+   }
+   
+   .home-sci{
+    position: absolute;
+    position: fixed;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30%;
+
+   }
+   .home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #47CBBD;
+    border: 2px solid bisque;
+    border-radius: 50%;
+    font-size: 20px;
+    color: bisque;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+   }
+   .home-sci a:hover{
+    background-color: #BAD78B;
+   }
+ 
+   .map{
+    position: relative;
+    width: 100%;
+    top: 30%;
+    border: 5px solid;
+    color: bisque;
+   }
+   
+   @keyframes marquee{
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(-50%)
+    }
+    }
+  
+
+   
+
+ 
+ }
+/* Low resolution Tablets and iPads */
+@media (min-width: 481px) and (max-width: 767px) {
+    
+  .header{
     position: absolute;
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:  transparent;
+    background-size: 13%, 13%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 5%;
+    padding-top: 4%;
+    padding-bottom: 5%;
+    z-index: 1;
+   }
+   .header a{
+    background-color: #ffa600a2;
+    border-radius: none;
+    font-size: 16px;
+    justify-content: space-around;
+    border: 1px solid;
+   }
+   .header a:hover{
+    background-color:  #47CBBD;
+
+   }   
+   .main-container{
+    position: relative;
     width: 100%;
     height: 100vh;
     background-color: #ffa600a2;
+    background-position: center;
+    background-attachment: fixed;
     background-image: url(src/img/backNextPage.jpg);
     background-size: cover;
    }
-   .face-content h2{
-    padding-top: 10%;
-    padding-left: 5%;
-    font-size: 24px;
-    color: black;
-    background-color: red;
-    align-items: center;
-    border: 2px solid;
-   }
+
+   
   
    .object{
     position:absolute;
@@ -111,6 +353,7 @@
    .main-container img{
     max-width: 100%;
    }
+   
 
    .img{
     border: 0;
@@ -156,6 +399,48 @@
     margin: auto;
     padding: 0 15px;
    }
+   .marquee-container{
+    display: flex;
+    align-items: center;
+    background: #47CBBD;
+    overflow: hidden;
+   }
+   .marquee{
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee:after{
+    content: "Моя девушка сказала, что фото на главной странице - моветон, но мне хотелось сделать сайт максимально информативным.";
+   }
+   .marquee-skills{
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee-skills:after{
+    content: "При помощи бегущей строки я хотел решить проблему размещения текста для мобильных устройств. Интересующийся задержит взгляд на ней, чтоб узнать, что на этой странице я держу сертификаты от BeonMax. Прямо сейчас я оканчиваю там курс и по JS.";
+   }
+   .marquee-portfolio{
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee-portfolio:after{
+    content: "Моё Портфолио не претендует на статус самого масштабного в мире, конечно... Здесь вы увидете лишь предыдущую версию сайта-резюме и мои проекты на гитхабе. К слову, ссылка на гитхаб находится в футере(внизу страницы).  ";
+   }
 
    .home{
     position: absolute;
@@ -165,9 +450,9 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 30%;
-    background-color: #F4E161;
-    bottom: 0;
+    height: 20%;
+    background-color: transparent;
+    bottom: 5%;
     
    }
 
@@ -187,30 +472,22 @@
     background-color: #BAD78B;
    }
 
-   .swipe a{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #47CBBD;
-    width: 50px;
-    height: 50px;
-    border: 2px solid bisque;
-    border-radius: 50%;
-    font-size: 20px;
-    color: bisque;
-    text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-    
-   }
+   
    .swipe a:hover{
     background-color: #BAD78B;
    }
    
+   .home-sci{
+    position: absolute;
+    position: fixed;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30%;
+
+   }
    .home-sci a{
-    position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -238,22 +515,30 @@
     color: bisque;
    }
    
+   @keyframes marquee{
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(-50%)
+    }
+    }
   
 
    
 
  
  }
-/* Low resolution Tablets and iPads */
-@media (min-width: 481px) and (max-width: 767px) {
-    
-   .header{
+/* Tablets iPads (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px){
+  
+  .header{
     position: absolute;
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:  #47CBBD;
+    background-color:  transparent;
     background-size: 13%, 13%;
     background-repeat: no-repeat;
     width: 100%;
@@ -278,30 +563,13 @@
     width: 100%;
     height: 100vh;
     background-color: #ffa600a2;
+    background-position: center;
+    background-attachment: fixed;
     background-image: url(src/img/backNextPage.jpg);
     background-size: cover;
    }
-   .face{
-    position: absolute;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background-color: #ffa600a2;
-    background-image: url(src/img/backNextPage.jpg);
-    background-size: cover;
-   }
-   .face-content h2{
-    padding-top: 10%;
-    padding-left: 5%;
-    font-size: 24px;
-    color: black;
-    background-color: red;
-    align-items: center;
-    border: 2px solid;
-   }
+
+   
   
    .object{
     position:absolute;
@@ -331,17 +599,18 @@
 
    .js-smartPhoto img, .js-smartPhoto-fit img, 
    .js-smartPhoto-hide img, .js-smartPhoto2 img{
-    height: 30%;
-    width: 50%;
+    height: 20%;
+    width: 100%;
     position: relative;
-    margin-top: 25%;
+    margin-top: 15%;
     margin-left: 0;
     
    }
 
    .main-container img{
-    max-width: 400px;
+    max-width: 100%;
    }
+   
 
    .img{
     border: 0;
@@ -387,6 +656,48 @@
     margin: auto;
     padding: 0 15px;
    }
+   .marquee-container{
+    display: flex;
+    align-items: center;
+    background: #47CBBD;
+    overflow: hidden;
+   }
+   .marquee{
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee:after{
+    content: "Моя девушка сказала, что фото на главной странице - моветон, но мне хотелось сделать сайт максимально информативным.";
+   }
+   .marquee-skills{
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee-skills:after{
+    content: "При помощи бегущей строки я хотел решить проблему размещения текста для мобильных устройств. Интересующийся задержит взгляд на ней, чтоб узнать, что на этой странице я держу сертификаты от BeonMax. Прямо сейчас я оканчиваю там курс и по JS.";
+   }
+   .marquee-portfolio{
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee-portfolio:after{
+    content: "Моё Портфолио не претендует на статус самого масштабного в мире, конечно... Здесь вы увидете лишь предыдущую версию сайта-резюме и мои проекты на гитхабе. К слову, ссылка на гитхаб находится в футере(внизу страницы).  ";
+   }
 
    .home{
     position: absolute;
@@ -396,234 +707,9 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 30%;
-    background-color: #F4E161;
-    bottom: 0;
-    
-   }
-
-   .btn-box{
-    width: 100%;
-    height: 5%;
-    
-   }
-   
-   .btn-box a{
-    font-size: 24px;
-    background-color: #47CBBD;
-    border-radius: 8%;
-    border: 2px solid;
-   }
-   .btn-box a:hover{
-    background-color: #BAD78B;
-   }
-
-   .swipe a{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #47CBBD;
-    width: 50px;
-    height: 50px;
-    border: 2px solid bisque;
-    border-radius: 50%;
-    font-size: 20px;
-    color: bisque;
-    text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-    
-   }
-   .swipe a:hover{
-    background-color: #BAD78B;
-   }
-   
-   .home-sci a{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: #47CBBD;
-    border: 2px solid bisque;
-    border-radius: 50%;
-    font-size: 20px;
-    color: bisque;
-    text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-   }
-   .home-sci a:hover{
-    background-color: #BAD78B;
-   }
- 
-   .map{
-    position: relative;
-    width: 100%;
-    top: 30%;
-    border: 5px solid;
-    color: bisque;
-   }
-}
-/* Tablets iPads (Portrait) */
-@media (min-width: 768px) and (max-width: 1024px){
-  
-  .header{
-    position: absolute;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:  #47CBBD;
-    background-size: 13%, 13%;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 5%;
-    padding-top: 4%;
-    padding-bottom: 5%;
-    z-index: 1;
-   }
-   .header a{
-    background-color: #ffa600a2;
-    border-radius: none;
-    font-size: 28px;
-    justify-content: space-around;
-    border: 1px solid;
-   }
-   .header a:hover{
-    background-color:  #47CBBD;
-
-   }   
-   .main-container{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: #ffa600a2;
-    background-image: url(src/img/backNextPage.jpg);
-    background-size: cover;
-   }
-   .face{
-    position: absolute;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background-color: #ffa600a2;
-    background-image: url(src/img/backNextPage.jpg);
-    background-size: cover;
-   }
-   .face-content h2{
-    padding-top: 10%;
-    padding-left: 5%;
-    font-size: 24px;
-    color: black;
-    background-color: red;
-    align-items: center;
-    border: 2px solid;
-   }
-  
-   .object{
-    position:absolute;
-  }
-
-  .van{
-    top: 50%;
-    width: 40%;
-    left: 0%;
-  }
-
-  #axis:hover .move-right{/*Для одного элемента в html можно определить несколько классов*/
-    transform: translate(480px,0,0);
-    -webkit-transform: translate(480px,0); /** Chrome & Safari **/
-    -o-transform: translate(1920px,0); /** Opera **/
-    -moz-transform: translate(1920px,0); /** Firefox **/
-  }
-
-  .object{
-    position: absolute;
-    transition: all 10s ease-in-out;
-    -webkit-transition: all 10s ease-in-out; /** Chrome & Safari **/
-    -moz-transition: all 5s ease-in-out; /** Firefox **/
-    -o-transition: all 5s ease-in-out; /** Opera **/
-  }
-
-
-   .js-smartPhoto img, .js-smartPhoto-fit img, 
-   .js-smartPhoto-hide img, .js-smartPhoto2 img{
-    height: 50%;
-    width: 50%;
-    position: relative;
-    margin-top: 15%;
-    margin-left: 0;
-    
-   }
-
-   .main-container img{
-    max-width: 100%;
-   }
-
-   .img{
-    border: 0;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-   }
-
-   .demo-list{
-    overflow-x: auto;
-    white-space: nowrap;
-   }
-
-   .div{
-    display: block;
-   }
-
-   .a{
-    color: bisque;
-    text-decoration: none;
-   }
-
-   .a{
+    height: 20%;
     background-color: transparent;
-   }
-
-   a:-webkit-any-link{
-   color: bisque;
-   cursor: pointer;
-   text-decoration: none;
-   }
-
-   .demo-list{
-    white-space: nowrap;
-   }
-
-   .main-container{
-    padding: 20px 15px;
-    font-size: 50%;
-   }
-
-   .container{
-    max-width: 853px;
-    margin: auto;
-    padding: 0 15px;
-   }
-
-   .home{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 30%;
-    background-color: #F4E161;
-    bottom: 0;
+    bottom: 5%;
     
    }
 
@@ -643,30 +729,22 @@
     background-color: #BAD78B;
    }
 
-   .swipe a{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #47CBBD;
-    width: 50px;
-    height: 50px;
-    border: 2px solid bisque;
-    border-radius: 50%;
-    font-size: 20px;
-    color: bisque;
-    text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-    
-   }
+   
    .swipe a:hover{
     background-color: #BAD78B;
    }
    
+   .home-sci{
+    position: absolute;
+    position: fixed;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30%;
+
+   }
    .home-sci a{
-    position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -694,6 +772,14 @@
     color: bisque;
    }
    
+   @keyframes marquee{
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(-50%)
+    }
+    }
   
 
    
@@ -711,7 +797,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:  #47CBBD;
+    background-color:  transparent;
     background-size: 13%, 13%;
     background-repeat: no-repeat;
     width: 100%;
@@ -723,7 +809,7 @@
    .header a{
     background-color: #ffa600a2;
     border-radius: none;
-    font-size: 32px;
+    font-size: 16px;
     justify-content: space-around;
     border: 1px solid;
    }
@@ -736,30 +822,13 @@
     width: 100%;
     height: 100vh;
     background-color: #ffa600a2;
+    background-position: center;
+    background-attachment: fixed;
     background-image: url(src/img/backNextPage.jpg);
     background-size: cover;
    }
-   .face{
-    position: absolute;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background-color: #ffa600a2;
-    background-image: url(src/img/backNextPage.jpg);
-    background-size: cover;
-   }
-   .face-content h2{
-    padding-top: 10%;
-    padding-left: 5%;
-    font-size: 24px;
-    color: black;
-    background-color: red;
-    align-items: center;
-    border: 2px solid;
-   }
+
+   
   
    .object{
     position:absolute;
@@ -789,17 +858,18 @@
 
    .js-smartPhoto img, .js-smartPhoto-fit img, 
    .js-smartPhoto-hide img, .js-smartPhoto2 img{
-    height: 30%;
-    width: 50%;
+    height: 20%;
+    width: 100%;
     position: relative;
-    margin-top: 25%;
+    margin-top: 15%;
     margin-left: 0;
     
    }
 
    .main-container img{
-    max-width: 400px;
+    max-width: 100%;
    }
+   
 
    .img{
     border: 0;
@@ -845,6 +915,48 @@
     margin: auto;
     padding: 0 15px;
    }
+   .marquee-container{
+    display: flex;
+    align-items: center;
+    background: #47CBBD;
+    overflow: hidden;
+   }
+   .marquee{
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee:after{
+    content: "Моя девушка сказала, что фото на главной странице - моветон, но мне хотелось сделать сайт максимально информативным.";
+   }
+   .marquee-skills{
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee-skills:after{
+    content: "При помощи бегущей строки я хотел решить проблему размещения текста для мобильных устройств. Интересующийся задержит взгляд на ней, чтоб узнать, что на этой странице я держу сертификаты от BeonMax. Прямо сейчас я оканчиваю там курс и по JS.";
+   }
+   .marquee-portfolio{
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee-portfolio:after{
+    content: "Моё Портфолио не претендует на статус самого масштабного в мире, конечно... Здесь вы увидете лишь предыдущую версию сайта-резюме и мои проекты на гитхабе. К слову, ссылка на гитхаб находится в футере(внизу страницы).  ";
+   }
 
    .home{
     position: absolute;
@@ -854,9 +966,9 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 30%;
-    background-color: #F4E161;
-    bottom: 0;
+    height: 20%;
+    background-color: transparent;
+    bottom: 5%;
     
    }
 
@@ -876,30 +988,22 @@
     background-color: #BAD78B;
    }
 
-   .swipe a{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #47CBBD;
-    width: 50px;
-    height: 50px;
-    border: 2px solid bisque;
-    border-radius: 50%;
-    font-size: 20px;
-    color: bisque;
-    text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-    
-   }
+   
    .swipe a:hover{
     background-color: #BAD78B;
    }
    
+   .home-sci{
+    position: absolute;
+    position: fixed;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30%;
+
+   }
    .home-sci a{
-    position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -926,9 +1030,275 @@
     border: 5px solid;
     color: bisque;
    }
-}
+   
+   @keyframes marquee{
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(-50%)
+    }
+    }
+  
+
+   
+
+ 
+ }
     
 /* Big boi Monitors */
 @media (min-width: 1281px) {
+  .header{
+    position: absolute;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  transparent;
+    background-size: 13%, 13%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 5%;
+    padding-top: 4%;
+    padding-bottom: 5%;
+    z-index: 1;
+   }
+   .header a{
+    background-color: #ffa600a2;
+    border-radius: none;
+    font-size: 16px;
+    justify-content: space-around;
+    border: 1px solid;
+   }
+   .header a:hover{
+    background-color:  #47CBBD;
+
+   }   
+   .main-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffa600a2;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(src/img/backNextPage.jpg);
+    background-size: cover;
+   }
+
+   
+  
+   .object{
+    position:absolute;
+  }
+
+  .van{
+    top: 50%;
+    width: 40%;
+    left: 0%;
+  }
+
+  #axis:hover .move-right{/*Для одного элемента в html можно определить несколько классов*/
+    transform: translate(480px,0,0);
+    -webkit-transform: translate(480px,0); /** Chrome & Safari **/
+    -o-transform: translate(1920px,0); /** Opera **/
+    -moz-transform: translate(1920px,0); /** Firefox **/
+  }
+
+  .object{
+    position: absolute;
+    transition: all 10s ease-in-out;
+    -webkit-transition: all 10s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all 5s ease-in-out; /** Firefox **/
+    -o-transition: all 5s ease-in-out; /** Opera **/
+  }
+
+
+   .js-smartPhoto img, .js-smartPhoto-fit img, 
+   .js-smartPhoto-hide img, .js-smartPhoto2 img{
+    height: 20%;
+    width: 100%;
+    position: relative;
+    margin-top: 15%;
+    margin-left: 0;
     
-}
+   }
+
+   .main-container img{
+    max-width: 100%;
+   }
+   
+
+   .img{
+    border: 0;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+   }
+
+   .demo-list{
+    overflow-x: auto;
+    white-space: nowrap;
+   }
+
+   .div{
+    display: block;
+   }
+
+   .a{
+    color: bisque;
+    text-decoration: none;
+   }
+
+   .a{
+    background-color: transparent;
+   }
+
+   a:-webkit-any-link{
+   color: bisque;
+   cursor: pointer;
+   text-decoration: none;
+   }
+
+   .demo-list{
+    white-space: nowrap;
+   }
+
+   .main-container{
+    padding: 20px 15px;
+    font-size: 100%;
+   }
+
+   .container{
+    max-width: 853px;
+    margin: auto;
+    padding: 0 15px;
+   }
+   .marquee-container{
+    display: flex;
+    align-items: center;
+    background: #47CBBD;
+    overflow: hidden;
+   }
+   .marquee{
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee:after{
+    content: "Моя девушка сказала, что фото на главной странице - моветон, но мне хотелось сделать сайт максимально информативным.";
+   }
+   .marquee-skills{
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee-skills:after{
+    content: "При помощи бегущей строки я хотел решить проблему размещения текста для мобильных устройств. Интересующийся задержит взгляд на ней, чтоб узнать, что на этой странице я держу сертификаты от BeonMax. Прямо сейчас я оканчиваю там курс и по JS.";
+   }
+   .marquee-portfolio{
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: bisque;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+   }
+   .marquee-portfolio:after{
+    content: "Моё Портфолио не претендует на статус самого масштабного в мире, конечно... Здесь вы увидете лишь предыдущую версию сайта-резюме и мои проекты на гитхабе. К слову, ссылка на гитхаб находится в футере(внизу страницы).  ";
+   }
+
+   .home{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    background-color: transparent;
+    bottom: 5%;
+    
+   }
+
+   .btn-box{
+    width: 100%;
+    height: 5%;
+    
+   }
+   
+   .btn-box a{
+    font-size: 24px;
+    background-color: #47CBBD;
+    border-radius: 8%;
+    border: 2px solid;
+   }
+   .btn-box a:hover{
+    background-color: #BAD78B;
+   }
+
+   
+   .swipe a:hover{
+    background-color: #BAD78B;
+   }
+   
+   .home-sci{
+    position: absolute;
+    position: fixed;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30%;
+
+   }
+   .home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #47CBBD;
+    border: 2px solid bisque;
+    border-radius: 50%;
+    font-size: 20px;
+    color: bisque;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+   }
+   .home-sci a:hover{
+    background-color: #BAD78B;
+   }
+ 
+   .map{
+    position: relative;
+    width: 100%;
+    top: 30%;
+    border: 5px solid;
+    color: bisque;
+   }
+   
+   @keyframes marquee{
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(-50%)
+    }
+    }
+  
+
+   
+
+ 
+ }
